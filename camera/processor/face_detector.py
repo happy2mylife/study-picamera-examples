@@ -36,7 +36,7 @@ class FaceDetector(object):
         # detectMultiScaleメソッドで処理し、認識した顔の座標情報を取得する
         faces = self.face_cascade.detectMultiScale(gray, 1.3, 3)
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(frame,'KINOKO:' . len(faces),(10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
+        cv2.putText(frame,str(len(faces)),(10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
 
         
         # 取得した座標情報を元に、cv2.rectangleを使ってframe上に
